@@ -1,15 +1,13 @@
-// Exercise 1
-// Answer 1
-const logedinUser = "Ramazani";
-console.log(logedinUser);
-
-// Answer 2
-const age = 14;
-console.log(age);
-
-// Answer 3
-if (age < 13) {
-  alert("You are not allowed to use this platform");
-} else{
-    alert("Welcome "+ logedinUser)
+// If Statement
+const mark = 50;
+if (mark > 75) {
+  console.log("The grade is A");
+} else if (mark > 60) {
+  console.log("The grade is B");
+} else if (mark > 40) {
+  console.log("The grade is C");
+} else if (mark > 20) {
+  console.log("The grade is D");
+} else {
+  console.log("The grade is F");
 }
