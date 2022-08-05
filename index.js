@@ -1,82 +1,59 @@
-// JavaScript Data Types
+/*
+ *  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
+ *
+ *  Use of this source code is governed by a BSD-style license
+ *  that can be found in the LICENSE file in the root of the source
+ *  tree.
+ */
+"use strict";
 
-// An Array of data types in JavaScript
-const dataTypes = [
-  {
-    name: "String",
-    description:
-      "A string is a sequence of characters, i.e. a sequence of characters.",
-    example: '"Hello World"',
-  },
-  {
-    name: "Number",
-    description: "A number is a numerical value.",
-    example: "5",
-  },
-  {
-    name: "Boolean",
-    description: "A boolean is a true or false value.",
-    example: "true",
-  },
-  {
-    name: "Null",
-    description: "A null value is an empty value.",
-    example: "null",
-  },
-  {
-    name: "Undefined",
-    description:
-      "An undefined value is a value that has not been assigned a value.",
-    example: "undefined",
-  },
-  {
-    name: "Object",
-    description: "An object is a collection of data types.",
-    example: "{}",
-  },
-];
+// Put variables in global scope to make them available to the browser console.
+const constraints = (window.constraints = {
+  audio: false,
+  video: true,
+});
 
-console.table(dataTypes);
-console.log(dataTypes[0].example.length);
-// JavaScript has six data types:
-// 1 - Undefined
-// 2 - Null
-// 3 - Boolean
-// 4 - String
-// 5 - Number
-// 6 - Object
+function handleSuccess(stream) {
+  const video = document.querySelector("video");
+  const videoTracks = stream.getVideoTracks();
+  console.log("Got stream with constraints:", constraints);
+  console.log(`Using video device: ${videoTracks[0].label}`);
+  window.stream = stream; // make variable available to browser console
+  video.srcObject = stream;
+}
 
-//1 Undefined
-// The undefined data type is used when a variable has not been assigned a value.
-var x;
-// console.log(x); // undefined
+function handleError(error) {
+  if (error.name === "OverconstrainedError") {
+    const v = constraints.video;
+    errorMsg(
+      `The resolution ${v.width.exact}x${v.height.exact} px is not supported by your device.`
+    );
+  } else if (error.name === "NotAllowedError") {
+    errorMsg(
+      "Permissions have not been granted to use your camera and " +
+        "microphone, you need to allow the page access to your devices in " +
+        "order for the demo to work."
+    );
+  }
+  errorMsg(`getUserMedia error: ${error.name}`, error);
+}
 
-//2 Null
-// The null data type is used when a variable has been assigned a value, but the value is set to null.
-var x = null;
-// console.log(x); // null
+function errorMsg(msg, error) {
+  const errorElement = document.querySelector("#errorMsg");
+  errorElement.innerHTML += `<p>${msg}</p>`;
+  if (typeof error !== "undefined") {
+    console.error(error);
+  }
+}
 
-//3 Boolean
-// The boolean data type is used to store true or false values.
-var x = true;
-// console.log(x); // true
-var x = false;
-// console.log(x); // false
+async function init(e) {
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia(constraints);
+    handleSuccess(stream);
+    e.target.disabled = true;
+  } catch (e) {
+    handleError(e);
+  }
+}
 
-//4 String
-// The string data type is used to store text.
-var x = "Hello World";
-// console.log(x); // Hello World
-
-//5 Number
-// The number data type is used to store numbers.
-var x = 10;
-// console.log(x); // 10
-
-//6 Object
-// The object data type is used to store objects.
-var x = {
-  name: "John",
-  age: 30,
-};
-// console.log(x); // {name: "John", age: 30}
+document.querySelector("#showVideo").addEventListener("click", (e) => init(e));
