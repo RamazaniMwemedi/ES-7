@@ -1,4 +1,5 @@
-#Exersice 2
+## Exersice 2
+
             1
                 write code that will add the x and y values {x: x > 0, y: y > 0}
             2
@@ -12,7 +13,7 @@
             6
                 write code that will exponent the x and y values {x: x > 0, y: y > 0}
 
-#Exersice 3
+## Exersice 3
         1
             write code that will pick the last element of the array
 
@@ -20,7 +21,7 @@
             write code that will pick the first element of the array
 
 
-#Exercise 4
+## Exercise 4
         
         1    console.log a message that tell about a car object
               use this object
@@ -34,7 +35,7 @@
                 mileage: 200
             }
 
-#Exercise 5
+## Exercise 5
     
         1    Mary is a teacher. She teaches x students. Her students scored the following grade in a Math test.
             {
