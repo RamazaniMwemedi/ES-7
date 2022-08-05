@@ -1,38 +1,38 @@
 #Exersice 2
-    1
-        write code that will add the x and y values {x: x > 0, y: y > 0}
-    2
-        write code that will substract the x and y values {x: x > 0, y: y > 0}
-    3
-        write code that will multiply the x and y values {x: x > 0, y: y > 0}
-    4
-        write code that will divide the x and y values {x: x > 0, y: y > 0}
-    5
-        write code that will modulus the x and y values {x: x > 0, y: y > 0}
-    6
-        write code that will exponent the x and y values {x: x > 0, y: y > 0}
+        1
+            write code that will add the x and y values {x: x > 0, y: y > 0}
+        2
+            write code that will substract the x and y values {x: x > 0, y: y > 0}
+        3
+            write code that will multiply the x and y values {x: x > 0, y: y > 0}
+        4
+            write code that will divide the x and y values {x: x > 0, y: y > 0}
+        5
+            write code that will modulus the x and y values {x: x > 0, y: y > 0}
+        6
+            write code that will exponent the x and y values {x: x > 0, y: y > 0}
 
 #Exersice 3
-    1
-        write code that will pick the last element of the array
+        1
+            write code that will pick the last element of the array
 
-    2
-        write code that will pick the first element of the array
+        2
+            write code that will pick the first element of the array
 
 
 #Exercise 4
-    1
-        console.log a message that tell about a car object
-        use this object
-        {
-            make: "Ford",
-            model: "Mustang",
-            year: 1969,
-            color: "red",
-            passengers: 2,
-            convertible: false,
-            mileage: 200
-        }
+        
+        1    console.log a message that tell about a car object
+              use this object
+            {
+                make: "Ford",
+                model: "Mustang",
+                year: 1969,
+                color: "red",
+                passengers: 2,
+                convertible: false,
+                mileage: 200
+            }
 
 #Exercise 5
     
