@@ -47,10 +47,8 @@ var students = [
   },
 ];
 
-// Filter students who are older than 30 and below 35
-let filteredStudents = students.filter(function (student) {
-  return student.age >= 30 && student.age <= 35;
-});
-
-console.log(filteredStudents);
-
+// Map and Filter exercises
+// 1. Map the array to an array of objects with the name and age properties
+// 2. Filter the array to only include students older than 30
+// 3. Filter the array to only include students younger than 30
+// 4. Filter the array to only include students whose name is longer than 5 characters
