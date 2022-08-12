@@ -47,8 +47,10 @@ var students = [
   },
 ];
 
-students.map(function (student) {
-  console.log(`${student.name} is ${student.age} years old`);
+// Filter students who are older than 30 and below 35
+let filteredStudents = students.filter(function (student) {
+  return student.age >= 30 && student.age <= 35;
 });
 
+console.log(filteredStudents);
 
