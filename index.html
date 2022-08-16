@@ -1,13 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ES 7</title>
-    <script src="./index.js" ></script>
-</head>
-<body >
-<h1>ES 7</h1>
-</body>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <h1>ES 7</h1>
+    <button onclick="alertName()">Alert my name</button>
+    <button onclick="openNewTab()">Open A new Tab</button>
+    <a
+      href="/login.html
+    "
+      target="_blank"
+      rel="noopener noreferrer"
+    >Login</a>
+  </body>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: aliceblue;
+      flex-direction: column;
+      gap: 10px;
+    }
+    h1 {
+      position: absolute;
+      top: 0px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    }
+    button {
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      background-color: #000;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    a{
+        /* a tag */
+        text-decoration: none;
+        color: #000;
+        
+    }
+  </style>
 </html>
