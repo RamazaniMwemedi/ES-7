@@ -1,3 +1,6 @@
+let username;
+let password;
+
 const alertName = () => {
   alert("Ramazani Mwemedi");
   confirm("Is your name Ramazani");
@@ -12,5 +15,18 @@ const openNewTab = () => {
 };
 
 const closeTab = () => {
-  window.close();
-}
+  console.log(form);
+};
+
+const usernameOnchage = (value) => {
+  username = value;
+};
+
+const passwordOnchage = (value) => {
+  password = value;
+};
+
+const onSubmit = (event) => {
+  event.preventDefault();
+  console.log(username, password)
+};
