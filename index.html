@@ -5,7 +5,20 @@
   </head>
   <body>
     <h1>Hello</h1>
+    <div id="users">
+    </div>
     <script src="./index.js"></script>
+    <style>
+      #users {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      #user {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 10px;
+      }
+    </style>
   </body>
 </html>
-
