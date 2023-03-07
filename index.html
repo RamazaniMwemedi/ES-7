@@ -5,7 +5,28 @@
   </head>
   <body>
     <h1>Hello</h1>
+    <ul></ul>
+    <div id="users"></div>
     <script src="./index.js"></script>
+    <style>
+      #users {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      #user {
+        display: flex;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+        background-color: #eee;
+        gap: 10px;
+      }
+      #user img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+      }
+    </style>
   </body>
 </html>
-
