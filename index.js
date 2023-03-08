@@ -31,10 +31,12 @@ users.map(function (user) {
   document.getElementById("users").innerHTML += `
   <div id="user">
     <div>
-      <img height="100" width="100" src="${user.profilePic}" alt="profile picture" />
+      <img height="100" width="100" src="${
+        user.profilePic
+      }" alt="profile picture" />
     </div>
     <div id="user-info">
-      <h3>${user.firstName} ${user.lastName}</h3>
+      <h3>${user.firstName.toUpperCase()} ${user.lastName.toUpperCase()}</h3>
       <p>${user.age}</p>
       
       <button>Follow</button>
