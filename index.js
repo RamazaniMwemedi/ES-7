@@ -46,3 +46,58 @@ users.map(function (user) {
     
   </div>`;
 });
+
+let people = ["Joy", "Kevin", "Munira", "Shasha"];
+let peopleObjects = [
+  {
+    name: "Rama",
+    address: "Kenya",
+  },
+  {
+    name: "Kevin",
+    address: "Rwanda",
+  },
+  {
+    name: "Munira",
+    address: "Ethiopia",
+  },
+  {
+    name: "John",
+    address: "Kenya",
+  },
+  {
+    name: "Shasha",
+    address: "Rwanda",
+  },
+  {
+    name: "Joy",
+    address: "Ethiopia",
+  },
+];
+
+peopleObjects
+  .filter((person) => person.address.toLowerCase() == "kenya")
+  .map((person) => {
+    document.getElementById("people").innerHTML += `
+    <div>
+      <h3>${person.name}</h3>
+      <p>${person.address}</p>
+    </div>
+   `;
+  });
+
+// peopleObjects.map(function (person) {
+//   document.getElementById("people").innerHTML += `
+//     <div>
+//       <h3>${person.name}</h3>
+//       <p>${person.address}</p>
+//     </div>
+//   `;
+// });
+
+people.map(
+  (person) =>
+    (document.querySelector(
+      "ol"
+    ).innerHTML += `<li>Hello ${person}! See you soon!!!</li>`)
+);
