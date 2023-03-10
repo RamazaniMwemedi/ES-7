@@ -75,14 +75,20 @@ let peopleObjects = [
   },
 ];
 
+let peopleFromEthiopia = peopleObjects.filter(function (person) {
+  return person.address.toLowerCase() == "ethiopia";
+});
+
+console.log("People from Ethiopia", peopleFromEthiopia);
+
 peopleObjects
   .filter((person) => person.address.toLowerCase() == "kenya")
   .map((person) => {
     document.getElementById("people").innerHTML += `
-    <div>
-      <h3>${person.name}</h3>
-      <p>${person.address}</p>
-    </div>
+      <div>
+        <h3>${person.name}</h3>
+        <p>${person.address}</p>
+      </div>
    `;
   });
 
